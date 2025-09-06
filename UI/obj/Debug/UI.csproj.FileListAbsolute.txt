@@ -10,3 +10,7 @@ C:\Users\agust\RiderProjects\WinFormApp\UI\bin\Debug\UI.exe.config
 C:\Users\agust\RiderProjects\WinFormApp\UI\bin\Debug\Infraestructura.dll
 C:\Users\agust\RiderProjects\WinFormApp\UI\bin\Debug\Infraestructura.pdb
 C:\Users\agust\RiderProjects\WinFormApp\UI\obj\Debug\UI.csproj.Up2Date
+C:\Users\agust\RiderProjects\WinFormApp\UI\bin\Debug\Dominio.dll
+C:\Users\agust\RiderProjects\WinFormApp\UI\bin\Debug\Negocio.dll
+C:\Users\agust\RiderProjects\WinFormApp\UI\bin\Debug\Dominio.pdb
+C:\Users\agust\RiderProjects\WinFormApp\UI\bin\Debug\Negocio.pdb
