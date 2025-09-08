@@ -1,6 +1,8 @@
-﻿namespace UI
+﻿using System.Windows.Forms;
+
+namespace UI
 {
-    partial class Listado
+    partial class Listado: UserControl
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -73,6 +75,7 @@
             this.botonCrear.Dock = System.Windows.Forms.DockStyle.Left;
             this.botonCrear.Width = 100;
             this.botonCrear.Click += new System.EventHandler(this.BotonCrearClick);
+            
             // 
             // botonVer
             // 
@@ -101,11 +104,6 @@
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 400); // tamaño inicial fijo
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Controls.Add(this.panelBotones);
             this.Controls.Add(this.tabla);
             this.Controls.Add(this.labelTitulo);

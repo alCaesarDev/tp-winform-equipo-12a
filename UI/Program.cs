@@ -3,6 +3,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using Infraestructura;
+using UI.Views;
 
 namespace UI
 {
@@ -14,7 +15,7 @@ namespace UI
             // TestearConexionBaseDeDatos();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Listado());
+            Application.Run(new Home());
         }
 
         private static void TestearConexionBaseDeDatos()

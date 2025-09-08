@@ -7,7 +7,7 @@ using Negocio;
 
 namespace UI
 {
-    public partial class Listado : Form
+    public partial class Listado : UserControl
     {
         private List<Articulo> articulos;
         private ArticuloView articuloSeleccionado;
@@ -66,7 +66,7 @@ namespace UI
         {
             MessageBox.Show($"Editar articulo con id {articuloSeleccionado.Id.ToString()}");
         }
-        
+
         private void BotonVerClick(object sender, EventArgs e)
         {
             MessageBox.Show($"Ver articulo con id {articuloSeleccionado.Id.ToString()}");
