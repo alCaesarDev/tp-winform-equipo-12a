@@ -7,12 +7,12 @@ using Negocio;
 
 namespace UI
 {
-    public partial class Listado : UserControl
+    public partial class Articulos : UserControl
     {
         private List<Articulo> articulos;
         private ArticuloView articuloSeleccionado;
 
-        public Listado()
+        public Articulos()
         {
             InitializeComponent();
         }

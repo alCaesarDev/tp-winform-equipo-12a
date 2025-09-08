@@ -2,9 +2,9 @@
 
 namespace UI.Views
 {
-    public partial class Home : Form
+    public partial class Principal : Form
     {
-        public Home()
+        public Principal()
         {
             InitializeComponent();
         }

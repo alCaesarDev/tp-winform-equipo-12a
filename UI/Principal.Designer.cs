@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace UI.Views
 {
-    partial class Home
+    partial class Principal
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@ namespace UI.Views
             TabPage tab3 = new TabPage("Categorias");
 
             // Instanciar UserControls
-            Listado vistaClientes = new Listado();
+            Articulos vistaClientes = new Articulos();
             vistaClientes.Dock = DockStyle.Fill; // Para que ocupe todo el tab
             tab1.Controls.Add(vistaClientes);
 

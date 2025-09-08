@@ -2,7 +2,7 @@
 
 namespace UI
 {
-    partial class Listado: UserControl
+    partial class Articulos: UserControl
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -37,7 +37,7 @@ namespace UI
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(800, 40);
             this.labelTitulo.TabIndex = 1;
-            this.labelTitulo.Text = "Gestión de Artículos";
+            this.labelTitulo.Text = "Artículos";
             this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabla
@@ -107,7 +107,7 @@ namespace UI
             this.Controls.Add(this.panelBotones);
             this.Controls.Add(this.tabla);
             this.Controls.Add(this.labelTitulo);
-            this.Name = "Listado";
+            this.Name = "Articulos";
             this.Text = "Gestión de Artículos";
             this.Load += new System.EventHandler(this.Cargar);
             this.ResumeLayout(false);

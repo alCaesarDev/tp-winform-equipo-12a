@@ -15,7 +15,7 @@ namespace UI
             // TestearConexionBaseDeDatos();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            Application.Run(new Principal());
         }
 
         private static void TestearConexionBaseDeDatos()
