@@ -18,7 +18,7 @@ namespace Negocio
             try
             {
                 conexion = BaseDeDatos.ObtenerConexion();
-                string consulta = "SELECT Id, IdArticulo, Url FROM IMAGENES WHERE IdArticulo = @idArticulo";
+                string consulta = "SELECT Id, IdArticulo, ImagenUrl FROM IMAGENES WHERE IdArticulo = @idArticulo";
 
                 comando = new SqlCommand(consulta, conexion);
                 comando.Parameters.AddWithValue("@idArticulo", articuloId);
@@ -31,7 +31,7 @@ namespace Negocio
                     {
                         Id = (int)lector["Id"],
                         IdArticulo = (int)lector["IdArticulo"],
-                        ImagenUrl = lector["Url"].ToString()
+                        ImagenUrl = lector["ImagenUrl"].ToString()
                     };
 
                     lista.Add(imagen);

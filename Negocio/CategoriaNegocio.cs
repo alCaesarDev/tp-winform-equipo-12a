@@ -6,16 +6,16 @@ using Infraestructura;
 
 namespace Negocio
 {
-    public class MarcaNegocio
+    public class CategoriaNegocio
     {
-        public Marca Buscar(int id)
+        public Categoria Buscar(int id)
         {
             SqlConnection conexion = null;
 
             try
             {
                 conexion = BaseDeDatos.ObtenerConexion();
-                var consulta = "SELECT Id, Descripcion FROM MARCAS WHERE Id = @id";
+                var consulta = "SELECT Id, Descripcion FROM CATEGORIAS WHERE Id = @id";
 
                 var comando = new SqlCommand(consulta, conexion);
                 comando.Parameters.AddWithValue("@id", id);
@@ -24,7 +24,7 @@ namespace Negocio
 
                 if (lector.Read())
                 {
-                    return new Marca
+                    return new Categoria()
                     {
                         Id = (int)lector["Id"],
                         Descripcion = lector["Descripcion"].ToString()
@@ -35,7 +35,7 @@ namespace Negocio
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al buscar marca", ex);
+                throw new Exception("Error al buscar categoria", ex);
             }
             finally
             {
@@ -43,9 +43,9 @@ namespace Negocio
             }
         }
 
-        public List<Marca> Listar()
+        public List<Categoria> Listar()
         {
-            List<Marca> lista = new List<Marca>();
+            List<Categoria> lista = new List<Categoria>();
             SqlConnection conexion = null;
 
             try
@@ -54,7 +54,7 @@ namespace Negocio
                 string consulta = @"
                 SELECT Id,
                        Descripcion
-                FROM MARCAS 
+                FROM CATEGORIAS 
                 ";
 
                 SqlCommand comando = new SqlCommand(consulta, conexion);
@@ -62,18 +62,18 @@ namespace Negocio
 
                 while (lector.Read())
                 {
-                    Marca marca = new Marca
+                    Categoria categoria = new Categoria
                     {
                         Id = (int)lector["Id"],
                         Descripcion = lector["Descripcion"].ToString(),
                     };
 
-                    lista.Add(marca);
+                    lista.Add(categoria);
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al listar marcas", ex);
+                throw new Exception("Error al listar categorias", ex);
             }
             finally
             {

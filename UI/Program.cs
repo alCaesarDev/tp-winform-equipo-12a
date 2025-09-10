@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using Infraestructura;
-using UI.Views;
+using UI.DTO;
 
 namespace UI
 {
@@ -12,7 +12,7 @@ namespace UI
         [STAThread]
         private static void Main()
         {
-            // TestearConexionBaseDeDatos();
+            TestearConexionBaseDeDatos();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Principal());
@@ -26,7 +26,7 @@ namespace UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(@"Error de conexión a la base: " + ex.Message);
+                MessageBox.Show(@"Error de conexión a la base de datos: " + ex.Message);
             }
         }
     }

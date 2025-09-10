@@ -9,47 +9,42 @@ using UI.DTO;
 
 namespace UI
 {
-    public class Articulos : Listado<ArticuloDto>
+    public class Categorias : Listado<CategoriaDto>
     {
         /**
-         * Cargo los articulos para mostrar la tabla
+         * Cargo los categorias para mostrar la tabla
          */
-        protected override List<ArticuloDto> ObtenerRegistros()
+        protected override List<CategoriaDto> ObtenerRegistros()
         {
-            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
-            List<Articulo> articulos = articuloNegocio.Listar();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            List<Categoria> categorias = categoriaNegocio.Listar();
 
             //Mapeo los resultados de la db con el dto
-            return articulos.Select(a => new ArticuloDto
+            return categorias.Select(a => new CategoriaDto
             {
                 Id = a.Id,
-                Codigo = a.Codigo,
-                Nombre = a.Nombre,
                 Descripcion = a.Descripcion,
-                Marca = a.Marca?.Descripcion,
-                Categoria = a.Categoria?.Descripcion,
-                Precio = a.Precio.ToString("C2")
             }).ToList();
         }
 
         protected override string ObtenerTitulo()
         {
-            return "Articulos";
+            return "Categorias";
         }
 
         protected override void ClickBotonVer(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca van los detalles del articulo {RegistroSeleccionado.Id}.");
+            MessageBox.Show($"Aca van los detalles de la categoria {RegistroSeleccionado.Id}.");
         }
 
         protected override void ClickBotonEditar(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca va el modal de edicion del articulo {RegistroSeleccionado.Id}.");
+            MessageBox.Show($"Aca va el modal de edicion de la categoria {RegistroSeleccionado.Id}.");
         }
 
         protected override void ClickBotonEliminar(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca va un modal de confirmacion de eliminacion del articulo {RegistroSeleccionado.Id}.");
+            MessageBox.Show($"Aca va un modal de confirmacion de eliminacion de la categoria {RegistroSeleccionado.Id}.");
         }
 
         protected override void ClickBotonCrear(object sender, EventArgs e)

@@ -1,8 +1,8 @@
 ﻿using System.Windows.Forms;
 
-namespace UI
+namespace UI.Abstactos
 {
-    partial class Articulos: UserControl
+    partial class Listado<T>
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -20,7 +20,7 @@ namespace UI
         private void InitializeComponent()
         {
             this.tabla = new System.Windows.Forms.DataGridView();
-            this.labelTitulo = new System.Windows.Forms.Label();
+            this.titulo = new System.Windows.Forms.Label();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.botonCrear = new System.Windows.Forms.Button();
             this.botonVer = new System.Windows.Forms.Button();
@@ -29,16 +29,16 @@ namespace UI
             ((System.ComponentModel.ISupportInitialize)(this.tabla)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelTitulo
+            // titulo
             // 
-            this.labelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTitulo.Location = new System.Drawing.Point(0, 0);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(800, 40);
-            this.labelTitulo.TabIndex = 1;
-            this.labelTitulo.Text = "Artículos";
-            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.titulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titulo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.titulo.Location = new System.Drawing.Point(0, 0);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(800, 40);
+            this.titulo.TabIndex = 1;
+            this.titulo.Text = this.ObtenerTitulo();
+            this.titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabla
             // 
@@ -56,7 +56,7 @@ namespace UI
             this.tabla.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tabla.Size = new System.Drawing.Size(800, 300);
             this.tabla.TabIndex = 0;
-            this.tabla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickEnCelda);
+            this.tabla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickRegistro);
             //
             // panelBotones
             // 
@@ -74,7 +74,7 @@ namespace UI
             this.botonCrear.Text = "Crear";
             this.botonCrear.Dock = System.Windows.Forms.DockStyle.Left;
             this.botonCrear.Width = 100;
-            this.botonCrear.Click += new System.EventHandler(this.BotonCrearClick);
+            this.botonCrear.Click += new System.EventHandler(this.ClickBotonCrear);
             
             // 
             // botonVer
@@ -83,7 +83,7 @@ namespace UI
             this.botonVer.Dock = System.Windows.Forms.DockStyle.Left;
             this.botonVer.Width = 100;
             this.botonVer.Enabled = false;
-            this.botonVer.Click += new System.EventHandler(this.BotonVerClick);
+            this.botonVer.Click += new System.EventHandler(this.ClickBotonVer);
             // 
             // botonEditar
             // 
@@ -91,7 +91,7 @@ namespace UI
             this.botonEditar.Dock = System.Windows.Forms.DockStyle.Left;
             this.botonEditar.Width = 100;
             this.botonEditar.Enabled = false;
-            this.botonEditar.Click += new System.EventHandler(this.BotonEditarClick);
+            this.botonEditar.Click += new System.EventHandler(this.ClickBotonEditar);
             // 
             // botonEliminar
             // 
@@ -99,6 +99,7 @@ namespace UI
             this.botonEliminar.Dock = System.Windows.Forms.DockStyle.Left;
             this.botonEliminar.Width = 100;
             this.botonEliminar.Enabled = false;
+            this.botonEliminar.Click += new System.EventHandler(this.ClickBotonEliminar);
             // 
             // Listado
             //
@@ -106,17 +107,15 @@ namespace UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelBotones);
             this.Controls.Add(this.tabla);
-            this.Controls.Add(this.labelTitulo);
-            this.Name = "Articulos";
-            this.Text = "Gestión de Artículos";
-            this.Load += new System.EventHandler(this.Cargar);
+            this.Controls.Add(this.titulo);
+            this.Load += new System.EventHandler(this.CargarRegistros);
             this.ResumeLayout(false);
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView tabla;
-        private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.Label titulo;
         private System.Windows.Forms.Panel panelBotones;
         private System.Windows.Forms.Button botonCrear;
         private System.Windows.Forms.Button botonEliminar;

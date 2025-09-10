@@ -1,19 +1,12 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace UI.Views
+namespace UI
 {
     partial class Principal
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -33,19 +26,23 @@ namespace UI.Views
             TabControl tabControl = new TabControl();
             tabControl.Dock = DockStyle.Fill;
 
-            // Crear las pestañas
+            // Crear las pestanias
             TabPage tab1 = new TabPage("Articulos");
             TabPage tab2 = new TabPage("Marcas");
             TabPage tab3 = new TabPage("Categorias");
 
             // Instanciar UserControls
             Articulos vistaClientes = new Articulos();
-            vistaClientes.Dock = DockStyle.Fill; // Para que ocupe todo el tab
+            vistaClientes.Dock = DockStyle.Fill;
             tab1.Controls.Add(vistaClientes);
-
-            // VistaProductos vistaProductos = new VistaProductos();
-            // vistaProductos.Dock = DockStyle.Fill;
-            // tab2.Controls.Add(vistaProductos);
+            
+            Marcas vistaMarcas = new Marcas();
+            vistaMarcas.Dock = DockStyle.Fill;
+            tab2.Controls.Add(vistaMarcas);
+            
+            Categorias vistaCategorias = new Categorias();
+            vistaCategorias.Dock = DockStyle.Fill;
+            tab3.Controls.Add(vistaCategorias);
 
             // Agregar pestañas
             tabControl.TabPages.Add(tab1);

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace UI.Views
+namespace UI
 {
     public partial class Principal : Form
     {
