@@ -55,3 +55,4 @@ C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo
 C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.EditarCategoria.resources
 C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.EliminarCategoria.resources
 C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.CrearArticulo.resources
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.VerArticulo.resources

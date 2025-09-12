@@ -108,7 +108,61 @@ namespace Negocio
         }
     
     
-    
+        public Articulo buscarPorId(int id)
+        {
+            SqlConnection conexion = null;
+            try
+            {
+                conexion = BaseDeDatos.ObtenerConexion();
+                string consulta = @"SELECT A.Id, Codigo, Nombre, A.Descripcion,M.Descripcion 
+                                  AS MarcaDescripcion, C.Descripcion AS CategoriaDescripcion,
+                                  Precio, IdMarca ,IdCategoria FROM ARTICULOS A JOIN CATEGORIAS C ON C.Id = A.IdCategoria
+                                  JOIN MARCAS M ON M.Id = A.IdMarca
+                                  WHERE A.Id = @id";
+                SqlCommand comando = new SqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@id" , id);
+                SqlDataReader lector = comando.ExecuteReader();
+                if (lector.Read())
+                {
+                    Categoria categoria = new Categoria();
+                    categoria.Id = (int)lector["IdCategoria"];
+                    categoria.Descripcion =lector["CategoriaDescripcion"].ToString();
+                    Marca marca = new Marca();
+                    marca.Id = (int)lector["IdMarca"];
+                    marca.Descripcion = lector["MarcaDescripcion"].ToString();
+
+
+                    Articulo articulo = new Articulo
+                    {
+                        Id = (int)lector["Id"],
+                        Codigo = lector["Codigo"].ToString(),
+                        Nombre = lector["Nombre"].ToString(),
+                        Descripcion = lector["Descripcion"].ToString(),
+                        Precio = (decimal)lector["Precio"],
+                        IdMarca = (int)lector["IdMarca"],
+                        IdCategoria = (int)lector["IdCategoria"],
+                        Marca = marca,
+                        Categoria = categoria
+                    };
+                    return articulo;
+
+
+
+
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar el articulo por ID", ex);
+                
+            }
+            finally
+            {
+                conexion?.Close();
+            }
+
+        }
     
     
     

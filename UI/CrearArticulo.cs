@@ -87,7 +87,8 @@ namespace UI
             catch (Exception ex)
             {
                
-                MessageBox.Show("Ocurrio un error al cargar los datos");
+                MessageBox.Show("Ocurrio un error al cargar los datos"+ ex.Message);
+
             }
         }
     }
