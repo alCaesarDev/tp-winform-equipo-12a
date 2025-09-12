@@ -81,6 +81,26 @@ namespace Negocio
             }
 
             return lista;
+
+
+
+
+
+
+
+
+
+
         }
+    
+
+
+
+
+
+
+
+
+    
     }
 }

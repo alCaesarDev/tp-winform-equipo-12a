@@ -14,3 +14,43 @@ C:\Users\agust\RiderProjects\WinFormApp\UI\bin\Debug\Dominio.dll
 C:\Users\agust\RiderProjects\WinFormApp\UI\bin\Debug\Negocio.dll
 C:\Users\agust\RiderProjects\WinFormApp\UI\bin\Debug\Dominio.pdb
 C:\Users\agust\RiderProjects\WinFormApp\UI\bin\Debug\Negocio.pdb
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\bin\Debug\UI.exe.config
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\bin\Debug\UI.exe
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\bin\Debug\UI.pdb
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\bin\Debug\Dominio.dll
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\bin\Debug\Infraestructura.dll
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\bin\Debug\Negocio.dll
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\bin\Debug\Dominio.pdb
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\bin\Debug\Infraestructura.pdb
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\bin\Debug\Negocio.pdb
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\obj\Debug\UI.csproj.AssemblyReference.cache
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\obj\Debug\UI.exe.config
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\obj\Debug\UI.csproj.Up2Date
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\obj\Debug\UI.exe
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\obj\Debug\UI.pdb
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\obj\Debug\UI.Principal.resources
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a-main\tp-winform-equipo-12a-main\UI\obj\Debug\UI.CrearCategoria.resources
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\bin\Debug\UI.exe.config
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\bin\Debug\UI.exe
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\bin\Debug\UI.pdb
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\bin\Debug\Dominio.dll
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\bin\Debug\Infraestructura.dll
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\bin\Debug\Negocio.dll
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\bin\Debug\Dominio.pdb
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\bin\Debug\Infraestructura.pdb
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\bin\Debug\Negocio.pdb
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.csproj.AssemblyReference.cache
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.exe.config
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.CrearCategoria.resources
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.Principal.resources
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.csproj.Up2Date
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.exe
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.pdb
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.EditarCategoria.resources
+C:\Users\Rodrigo\Desktop\tp-winform-equipo-12a- COPIAAAAAAmain\tp-winform-equipo-12a-main\UI\obj\Debug\UI.EliminarCategoria.resources

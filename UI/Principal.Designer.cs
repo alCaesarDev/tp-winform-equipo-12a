@@ -21,38 +21,106 @@ namespace UI
         
         private void InitializeComponent()
         {
-            // Crear TabControl
-            ClientSize = new System.Drawing.Size(800, 400);
-            TabControl tabControl = new TabControl();
-            tabControl.Dock = DockStyle.Fill;
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tab1 = new System.Windows.Forms.TabPage();
+            this.vistaClientes = new UI.Articulos();
+            this.tab2 = new System.Windows.Forms.TabPage();
+            this.vistaMarcas = new UI.Marcas();
+            this.tab3 = new System.Windows.Forms.TabPage();
+            this.vistaCategorias = new UI.Categorias();
+            this.tabControl.SuspendLayout();
+            this.tab1.SuspendLayout();
+            this.tab2.SuspendLayout();
+            this.tab3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tabControl
+            // 
+            this.tabControl.Controls.Add(this.tab1);
+            this.tabControl.Controls.Add(this.tab2);
+            this.tabControl.Controls.Add(this.tab3);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Location = new System.Drawing.Point(0, 0);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(505, 353);
+            this.tabControl.TabIndex = 0;
+            // 
+            // tab1
+            // 
+            this.tab1.Controls.Add(this.vistaClientes);
+            this.tab1.Location = new System.Drawing.Point(4, 22);
+            this.tab1.Name = "tab1";
+            this.tab1.Size = new System.Drawing.Size(497, 327);
+            this.tab1.TabIndex = 0;
+            this.tab1.Text = "Articulos";
+            // 
+            // vistaClientes
+            // 
+            this.vistaClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vistaClientes.Location = new System.Drawing.Point(0, 0);
+            this.vistaClientes.Name = "vistaClientes";
+            this.vistaClientes.Size = new System.Drawing.Size(497, 327);
+            this.vistaClientes.TabIndex = 0;
+            this.vistaClientes.Load += new System.EventHandler(this.vistaClientes_Load);
+            // 
+            // tab2
+            // 
+            this.tab2.Controls.Add(this.vistaMarcas);
+            this.tab2.Location = new System.Drawing.Point(4, 22);
+            this.tab2.Name = "tab2";
+            this.tab2.Size = new System.Drawing.Size(847, 459);
+            this.tab2.TabIndex = 1;
+            this.tab2.Text = "Marcas";
+            // 
+            // vistaMarcas
+            // 
+            this.vistaMarcas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vistaMarcas.Location = new System.Drawing.Point(0, 0);
+            this.vistaMarcas.Name = "vistaMarcas";
+            this.vistaMarcas.Size = new System.Drawing.Size(847, 459);
+            this.vistaMarcas.TabIndex = 0;
+            this.vistaMarcas.Load += new System.EventHandler(this.vistaMarcas_Load);
+            // 
+            // tab3
+            // 
+            this.tab3.Controls.Add(this.vistaCategorias);
+            this.tab3.Location = new System.Drawing.Point(4, 22);
+            this.tab3.Name = "tab3";
+            this.tab3.Size = new System.Drawing.Size(847, 459);
+            this.tab3.TabIndex = 2;
+            this.tab3.Text = "Categorias";
+            // 
+            // vistaCategorias
+            // 
+            this.vistaCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vistaCategorias.Location = new System.Drawing.Point(0, 0);
+            this.vistaCategorias.Name = "vistaCategorias";
+            this.vistaCategorias.Size = new System.Drawing.Size(847, 459);
+            this.vistaCategorias.TabIndex = 0;
+            this.vistaCategorias.Load += new System.EventHandler(this.vistaCategorias_Load);
+            // 
+            // Principal
+            // 
+            this.ClientSize = new System.Drawing.Size(505, 353);
+            this.Controls.Add(this.tabControl);
+            this.Name = "Principal";
+            this.tabControl.ResumeLayout(false);
+            this.tab1.ResumeLayout(false);
+            this.tab2.ResumeLayout(false);
+            this.tab3.ResumeLayout(false);
+            this.ResumeLayout(false);
 
-            // Crear las pestanias
-            TabPage tab1 = new TabPage("Articulos");
-            TabPage tab2 = new TabPage("Marcas");
-            TabPage tab3 = new TabPage("Categorias");
-
-            // Instanciar UserControls
-            Articulos vistaClientes = new Articulos();
-            vistaClientes.Dock = DockStyle.Fill;
-            tab1.Controls.Add(vistaClientes);
-            
-            Marcas vistaMarcas = new Marcas();
-            vistaMarcas.Dock = DockStyle.Fill;
-            tab2.Controls.Add(vistaMarcas);
-            
-            Categorias vistaCategorias = new Categorias();
-            vistaCategorias.Dock = DockStyle.Fill;
-            tab3.Controls.Add(vistaCategorias);
-
-            // Agregar pestañas
-            tabControl.TabPages.Add(tab1);
-            tabControl.TabPages.Add(tab2);
-            tabControl.TabPages.Add(tab3);
-
-            // Agregar TabControl al form
-            this.Controls.Add(tabControl);
         }
 
         #endregion
+
+        private TabControl tabControl;
+        private TabPage tab1;
+        private Articulos vistaClientes;
+        private TabPage tab2;
+        private Marcas vistaMarcas;
+        private TabPage tab3;
+        private Categorias vistaCategorias;
     }
 }

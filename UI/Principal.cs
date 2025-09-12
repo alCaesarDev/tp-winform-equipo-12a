@@ -8,5 +8,20 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void vistaMarcas_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void vistaClientes_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void vistaCategorias_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
