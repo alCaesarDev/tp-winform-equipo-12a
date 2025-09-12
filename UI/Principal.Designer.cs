@@ -43,7 +43,7 @@ namespace UI
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(505, 353);
+            this.tabControl.Size = new System.Drawing.Size(800, 400);
             this.tabControl.TabIndex = 0;
             // 
             // tab1
@@ -51,7 +51,7 @@ namespace UI
             this.tab1.Controls.Add(this.vistaClientes);
             this.tab1.Location = new System.Drawing.Point(4, 22);
             this.tab1.Name = "tab1";
-            this.tab1.Size = new System.Drawing.Size(497, 327);
+            this.tab1.Size = new System.Drawing.Size(792, 374);
             this.tab1.TabIndex = 0;
             this.tab1.Text = "Articulos";
             // 
@@ -60,16 +60,15 @@ namespace UI
             this.vistaClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vistaClientes.Location = new System.Drawing.Point(0, 0);
             this.vistaClientes.Name = "vistaClientes";
-            this.vistaClientes.Size = new System.Drawing.Size(497, 327);
+            this.vistaClientes.Size = new System.Drawing.Size(792, 374);
             this.vistaClientes.TabIndex = 0;
-            this.vistaClientes.Load += new System.EventHandler(this.vistaClientes_Load);
             // 
             // tab2
             // 
             this.tab2.Controls.Add(this.vistaMarcas);
             this.tab2.Location = new System.Drawing.Point(4, 22);
             this.tab2.Name = "tab2";
-            this.tab2.Size = new System.Drawing.Size(847, 459);
+            this.tab2.Size = new System.Drawing.Size(792, 374);
             this.tab2.TabIndex = 1;
             this.tab2.Text = "Marcas";
             // 
@@ -78,7 +77,7 @@ namespace UI
             this.vistaMarcas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vistaMarcas.Location = new System.Drawing.Point(0, 0);
             this.vistaMarcas.Name = "vistaMarcas";
-            this.vistaMarcas.Size = new System.Drawing.Size(847, 459);
+            this.vistaMarcas.Size = new System.Drawing.Size(792, 374);
             this.vistaMarcas.TabIndex = 0;
             this.vistaMarcas.Load += new System.EventHandler(this.vistaMarcas_Load);
             // 
@@ -87,7 +86,7 @@ namespace UI
             this.tab3.Controls.Add(this.vistaCategorias);
             this.tab3.Location = new System.Drawing.Point(4, 22);
             this.tab3.Name = "tab3";
-            this.tab3.Size = new System.Drawing.Size(847, 459);
+            this.tab3.Size = new System.Drawing.Size(792, 374);
             this.tab3.TabIndex = 2;
             this.tab3.Text = "Categorias";
             // 
@@ -96,13 +95,12 @@ namespace UI
             this.vistaCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vistaCategorias.Location = new System.Drawing.Point(0, 0);
             this.vistaCategorias.Name = "vistaCategorias";
-            this.vistaCategorias.Size = new System.Drawing.Size(847, 459);
+            this.vistaCategorias.Size = new System.Drawing.Size(792, 374);
             this.vistaCategorias.TabIndex = 0;
-            this.vistaCategorias.Load += new System.EventHandler(this.vistaCategorias_Load);
             // 
             // Principal
             // 
-            this.ClientSize = new System.Drawing.Size(505, 353);
+            this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this.tabControl);
             this.Name = "Principal";
             this.tabControl.ResumeLayout(false);

@@ -39,37 +39,7 @@ namespace UI
 
         protected override void ClickBotonVer(object sender, EventArgs e)
         {
-            if (RegistroSeleccionado != null)
-            {
-                try
-                {
-                    int idSeleccionado = RegistroSeleccionado.Id;
-                    ArticuloNegocio negocio = new ArticuloNegocio();
-                    Articulo articuloCompleto = negocio.buscarPorId(idSeleccionado);
-                    if(articuloCompleto != null)
-                    {
-                        VerArticulo formularioDetalle = new VerArticulo(articuloCompleto);
-                        formularioDetalle.ShowDialog();
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se pudo encontrar el articulo en la base de datos");
-
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Ocurrio un error al buscar el detalle del articulo: " + ex.Message);
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor,seleccione un articulo para ver su detalle");
-            }
-            
-            //MessageBox.Show($"Aca van los detalles del articulo {RegistroSeleccionado.Id}.");
+            MessageBox.Show($"Aca van los detalles del articulo {RegistroSeleccionado.Id}.");
         }
 
         protected override void ClickBotonEditar(object sender, EventArgs e)
@@ -85,10 +55,7 @@ namespace UI
         protected override void ClickBotonCrear(object sender, EventArgs e)
         {
 
-            CrearArticulo ventanaArticulo = new CrearArticulo();
-            ventanaArticulo.ShowDialog();
-
-            //MessageBox.Show($"Aca va el modal de creacion.");
+            MessageBox.Show($"Aca va el modal de creacion.");
         }
     }
 }

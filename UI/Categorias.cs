@@ -39,51 +39,17 @@ namespace UI
 
         protected override void ClickBotonEditar(object sender, EventArgs e)
         {
-          
-                
-                Categoria categoria = new Categoria
-                {
-                    Id = RegistroSeleccionado.Id,
-                    Descripcion = RegistroSeleccionado.Descripcion
-                };
-
-                
-                EditarCategoria ventana = new EditarCategoria(categoria);
-                ventana.ShowDialog();
-
-             
-            
-            
-           
+            MessageBox.Show($"Aca va el modal de edicion de la categoria {RegistroSeleccionado.Id}.");
         }
+
         protected override void ClickBotonEliminar(object sender, EventArgs e)
         {
-            if (RegistroSeleccionado != null)
-            {
-                Categoria categoriaEliminar = new Categoria
-                {
-                    Id = RegistroSeleccionado.Id,
-                    Descripcion = RegistroSeleccionado.Descripcion
-                };
-
-            
-            EliminarCategoria ventana = new EliminarCategoria(categoriaEliminar);
-            DialogResult resultado = ventana.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Por favor , seleccione una categoria para eliminar");
-            }    
-
-            //MessageBox.Show($"Aca va un modal de confirmacion de eliminacion de la categoria {RegistroSeleccionado.Id}.");
-            
+            MessageBox.Show($"Aca va un modal de confirmacion de eliminacion de la categoria {RegistroSeleccionado.Id}.");
         }
+
         protected override void ClickBotonCrear(object sender, EventArgs e)
         {
-            CrearCategoria ventana = new CrearCategoria();
-            ventana.ShowDialog();
-
-            //MessageBox.Show($"Aca va el modal de creacion.");
+            MessageBox.Show($"Aca va el modal de creacion.");
         }
     }
 }

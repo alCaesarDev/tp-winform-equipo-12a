@@ -22,7 +22,7 @@ namespace UI.Abstactos
 
         protected abstract List<T> ObtenerRegistros();
 
-        private void CargarRegistros(object sender, EventArgs e)
+        protected void CargarRegistros(object sender, EventArgs e)
         {
             try
             {

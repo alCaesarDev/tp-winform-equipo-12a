@@ -37,17 +37,48 @@ namespace UI
 
         protected override void ClickBotonEditar(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca va el modal de edicion de la marca {RegistroSeleccionado.Id}.");
+            if (RegistroSeleccionado != null)
+            {
+                MarcaNegocio negocio = new MarcaNegocio();
+                Marca marca = negocio.Buscar(RegistroSeleccionado.Id);
+
+                EditarMarca ventana = new EditarMarca(marca);
+                ventana.ShowDialog();
+                CargarRegistros(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una marca para editar.");
+            }
         }
 
-        protected override void ClickBotonEliminar(object sender, EventArgs e)
+                protected override void ClickBotonEliminar(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca va un modal de confirmacion de eliminacion de la marca {RegistroSeleccionado.Id}.");
+            if (RegistroSeleccionado != null)
+            {
+                MarcaNegocio negocio = new MarcaNegocio();
+                Marca marcaAEliminar = negocio.Buscar(RegistroSeleccionado.Id);
+
+                EliminarMarca ventana = new EliminarMarca(marcaAEliminar);
+                DialogResult resultado = ventana.ShowDialog();
+
+                if (resultado == DialogResult.OK)
+                {
+                    CargarRegistros(sender, e);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una marca para eliminar");
+            }
         }
 
         protected override void ClickBotonCrear(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca va el modal de creacion.");
+            CrearMarca ventana = new CrearMarca();
+            ventana.ShowDialog();
+            //MessageBox.Show($"Aca va el modal de creacion.");
+            CargarRegistros(sender, e);
         }
     }
 }

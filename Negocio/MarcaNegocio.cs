@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using Dominio;
@@ -81,26 +81,37 @@ namespace Negocio
             }
 
             return lista;
-
-
-
-
-
-
-
-
-
-
         }
-    
 
+        public void agregar(Marca marca)
+        {
+            using (SqlConnection conexion = BaseDeDatos.ObtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("INSERT INTO MARCAS (Descripcion) VALUES (@Descripcion)", conexion);
+                comando.Parameters.AddWithValue("@Descripcion", marca.Descripcion);
+                comando.ExecuteNonQuery();
+            }
+        }
 
+        public void modificar(Marca marca)
+        {
+            using (SqlConnection conexion = BaseDeDatos.ObtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("UPDATE MARCAS SET Descripcion = @Descripcion WHERE Id = @Id", conexion);
+                comando.Parameters.AddWithValue("@Descripcion", marca.Descripcion);
+                comando.Parameters.AddWithValue("@Id", marca.Id);
+                comando.ExecuteNonQuery();
+            }
+        }
 
-
-
-
-
-
-    
+        public void eliminar(int id)
+        {
+            using (SqlConnection conexion = BaseDeDatos.ObtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("DELETE FROM MARCAS WHERE Id = @Id", conexion);
+                comando.Parameters.AddWithValue("@Id", id);
+                comando.ExecuteNonQuery();
+            }
+        }
     }
 }
