@@ -54,7 +54,11 @@ namespace UI
 
         protected override void ClickBotonCrear(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca va el modal de creacion.");
+
+            CrearArticulo ventanaArticulo = new CrearArticulo();
+            ventanaArticulo.ShowDialog();
+
+            //MessageBox.Show($"Aca va el modal de creacion.");
         }
     }
 }

@@ -59,6 +59,12 @@
     <Compile Include="Categorias.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="CrearArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearArticulo.Designer.cs">
+      <DependentUpon>CrearArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DTO\ArticuloDto.cs" />
+    <EmbeddedResource Include="CrearArticulo.resx">
+      <DependentUpon>CrearArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearCategoria.resx">
       <DependentUpon>CrearCategoria.cs</DependentUpon>
     </EmbeddedResource>

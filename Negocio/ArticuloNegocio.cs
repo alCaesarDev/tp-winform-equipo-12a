@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
 using Dominio;
 using Infraestructura;
 
@@ -70,6 +71,50 @@ namespace Negocio
             }
 
             return lista;
+
+
+          
+    
+        
         }
+
+        public void agregar(Articulo nuevo)
+        {
+            SqlConnection conexion = null;
+            try
+            {
+                conexion = BaseDeDatos.ObtenerConexion();
+                string consulta = "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " + "VALUES (@codigo, @nombre, @descripcion, @idMarca, @idCategoria, @precio)";
+
+                SqlCommand comando = new SqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@codigo", nuevo.Codigo);
+                comando.Parameters.AddWithValue("@nombre", nuevo.Nombre);
+                comando.Parameters.AddWithValue("@descripcion", nuevo.Descripcion);
+                comando.Parameters.AddWithValue("@idMarca", nuevo.Marca.Id);
+                comando.Parameters.AddWithValue("@idCategoria", nuevo.Categoria.Id);
+                comando.Parameters.AddWithValue("@precio", nuevo.Precio);
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Errror al  agregar el articulo",ex);
+
+            }
+            finally
+            {
+                conexion?.Close();
+            }
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     }
 }

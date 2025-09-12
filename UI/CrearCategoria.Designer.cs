@@ -84,7 +84,6 @@
             this.lblTituloCategoria.Size = new System.Drawing.Size(165, 20);
             this.lblTituloCategoria.TabIndex = 6;
             this.lblTituloCategoria.Text = "Crea una Categoria";
-           
             // 
             // CrearCategoria
             // 
