@@ -34,22 +34,51 @@ namespace UI
 
         protected override void ClickBotonVer(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca van los detalles de la categoria {RegistroSeleccionado.Id}.");
         }
+
+        protected override void ClickBotonFiltros(object sender, EventArgs e)
+        {
+        }
+
+        protected override bool MostrarBotonVer() => false;
+        protected override bool MostrarBotonFiltros() => false;
 
         protected override void ClickBotonEditar(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca va el modal de edicion de la categoria {RegistroSeleccionado.Id}.");
+            Categoria categoria = new Categoria
+            {
+                Id = RegistroSeleccionado.Id,
+                Descripcion = RegistroSeleccionado.Descripcion
+            };
+            EditarCategoria ventana = new EditarCategoria(categoria);
+            ventana.ShowDialog();
+            CargarRegistros(sender, e);
         }
 
         protected override void ClickBotonEliminar(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca va un modal de confirmacion de eliminacion de la categoria {RegistroSeleccionado.Id}.");
+            if (RegistroSeleccionado != null)
+            {
+                Categoria categoriaEliminar = new Categoria
+                {
+                    Id = RegistroSeleccionado.Id,
+                    Descripcion = RegistroSeleccionado.Descripcion
+                };
+                EliminarCategoria ventana = new EliminarCategoria(categoriaEliminar);
+                ventana.ShowDialog();
+                CargarRegistros(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Por favor , seleccione una categoria para eliminar");
+            }
         }
 
         protected override void ClickBotonCrear(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca va el modal de creacion.");
+            CrearCategoria ventana = new CrearCategoria();
+            ventana.ShowDialog();
+            CargarRegistros(sender, e);
         }
     }
 }

@@ -16,15 +16,31 @@ namespace UI
          */
         protected override List<MarcaDto> ObtenerRegistros()
         {
-            MarcaNegocio marcaNegocio = new MarcaNegocio();
-            List<Marca> marcas = marcaNegocio.Listar();
-            return marcas.Select(a => new MarcaDto()
+            try
             {
-                Id = a.Id,
-                Descripcion = a.Descripcion,
-            }).ToList();
+                MarcaNegocio marcaNegocio = new MarcaNegocio();
+                List<Marca> marcas = marcaNegocio.Listar();
+                return marcas.Select(a => new MarcaDto()
+                {
+                    Id = a.Id,
+                    Descripcion = a.Descripcion,
+                }).ToList();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                throw;
+            }
         }
 
+        protected override bool MostrarBotonVer() => false;
+        protected override bool MostrarBotonFiltros() => false;
+
+        protected override void ClickBotonFiltros(object sender, EventArgs e)
+        {
+            
+        }
+        
         protected override string ObtenerTitulo()
         {
             return "Marcas";
@@ -43,6 +59,7 @@ namespace UI
                 Marca marca = negocio.Buscar(RegistroSeleccionado.Id);
 
                 EditarMarca ventana = new EditarMarca(marca);
+
                 ventana.ShowDialog();
                 CargarRegistros(sender, e);
             }
@@ -52,7 +69,7 @@ namespace UI
             }
         }
 
-                protected override void ClickBotonEliminar(object sender, EventArgs e)
+        protected override void ClickBotonEliminar(object sender, EventArgs e)
         {
             if (RegistroSeleccionado != null)
             {
@@ -77,7 +94,6 @@ namespace UI
         {
             CrearMarca ventana = new CrearMarca();
             ventana.ShowDialog();
-            //MessageBox.Show($"Aca va el modal de creacion.");
             CargarRegistros(sender, e);
         }
     }

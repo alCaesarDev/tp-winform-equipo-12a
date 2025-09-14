@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace UI.Abstactos
 {
@@ -17,7 +18,7 @@ namespace UI.Abstactos
 
         #region Windows Form Designer generated code
 
-        private void InitializeComponent()
+        protected void InitializeComponent()
         {
             this.tabla = new System.Windows.Forms.DataGridView();
             this.titulo = new System.Windows.Forms.Label();
@@ -26,19 +27,40 @@ namespace UI.Abstactos
             this.botonVer = new System.Windows.Forms.Button();
             this.botonEditar = new System.Windows.Forms.Button();
             this.botonEliminar = new System.Windows.Forms.Button();
+            this.botonFiltros = new System.Windows.Forms.Button();
+            this.panelSuperior = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.tabla)).BeginInit();
             this.SuspendLayout();
             // 
             // titulo
             // 
-            this.titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.titulo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.titulo.Location = new System.Drawing.Point(0, 0);
+            this.titulo.AutoSize = true;
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(800, 40);
             this.titulo.TabIndex = 1;
             this.titulo.Text = this.ObtenerTitulo();
             this.titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // botonFiltros
+            // 
+            this.botonFiltros.Text = "Filtrar";
+            this.botonFiltros.AutoSize = true;
+            this.botonFiltros.Click += new System.EventHandler(this.ClickBotonFiltros);
+            
+            // 
+            // panelSuperior
+            // 
+            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSuperior.Height = 40;
+            this.panelSuperior.AutoSize = true;
+            this.panelSuperior.WrapContents = false;
+            this.panelSuperior.FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight;
+            this.panelSuperior.Controls.Add(this.titulo);
+            if (MostrarBotonFiltros())
+            {
+                this.panelSuperior.Controls.Add(this.botonFiltros);
+            }
+
             // 
             // tabla
             // 
@@ -65,7 +87,12 @@ namespace UI.Abstactos
             this.panelBotones.Padding = new System.Windows.Forms.Padding(10);
             this.panelBotones.Controls.Add(this.botonEliminar);
             this.panelBotones.Controls.Add(this.botonEditar);
-            this.panelBotones.Controls.Add(this.botonVer);
+            
+            if (this.MostrarBotonVer())
+            {
+                this.panelBotones.Controls.Add(this.botonVer);
+            }
+            
             this.panelBotones.Controls.Add(this.botonCrear);
             this.panelBotones.Name = "panelBotones";
             // 
@@ -107,7 +134,7 @@ namespace UI.Abstactos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelBotones);
             this.Controls.Add(this.tabla);
-            this.Controls.Add(this.titulo);
+            this.Controls.Add(this.panelSuperior);
             this.Load += new System.EventHandler(this.CargarRegistros);
             this.ResumeLayout(false);
         }
@@ -121,5 +148,7 @@ namespace UI.Abstactos
         private System.Windows.Forms.Button botonEliminar;
         private System.Windows.Forms.Button botonEditar;
         private System.Windows.Forms.Button botonVer;
+        private System.Windows.Forms.Button botonFiltros;
+        private System.Windows.Forms.FlowLayoutPanel panelSuperior;
     }
 }

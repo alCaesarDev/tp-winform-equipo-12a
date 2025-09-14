@@ -26,7 +26,7 @@ namespace UI
                     return;
                 }
 
-                negocio.agregar(nuevaMarca);
+                negocio.Agregar(nuevaMarca);
                 MessageBox.Show("Agregado exitosamente.");
                 Close();
             }

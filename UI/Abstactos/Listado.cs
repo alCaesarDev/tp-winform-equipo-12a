@@ -17,10 +17,15 @@ namespace UI.Abstactos
 
         protected abstract void ClickBotonCrear(object sender, EventArgs e);
         protected abstract void ClickBotonEditar(object sender, EventArgs e);
+        protected abstract bool MostrarBotonVer();
         protected abstract void ClickBotonEliminar(object sender, EventArgs e);
         protected abstract void ClickBotonVer(object sender, EventArgs e);
 
         protected abstract List<T> ObtenerRegistros();
+        
+        protected abstract bool MostrarBotonFiltros();
+
+        protected abstract void ClickBotonFiltros(object sender, EventArgs e);
 
         protected void CargarRegistros(object sender, EventArgs e)
         {

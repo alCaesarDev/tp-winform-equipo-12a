@@ -59,6 +59,10 @@
     <Compile Include="Categorias.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="CrearArticulo.cs" />
+    <Compile Include="CrearArticulo.Designer.cs" />
+    <Compile Include="CrearCategoria.cs" />
+    <Compile Include="CrearCategoria.Designer.cs" />
     <Compile Include="CrearMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,17 +71,27 @@
     </Compile>
     <Compile Include="DTO\CategoriaDto.cs" />
     <Compile Include="DTO\MarcaDto.cs" />
+    <Compile Include="EditarCategoria.cs" />
+    <Compile Include="EditarCategoria.Designer.cs" />
     <Compile Include="EditarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditarMarca.Designer.cs">
       <DependentUpon>EditarMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarCategoria.cs" />
+    <Compile Include="EliminarCategoria.Designer.cs" />
     <Compile Include="EliminarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EliminarMarca.Designer.cs">
       <DependentUpon>EliminarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiltroArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltroArticulos.Designer.cs">
+      <DependentUpon>FiltroArticulos.cs</DependentUpon>
     </Compile>
     <Compile Include="Marcas.cs">
       <SubType>UserControl</SubType>
@@ -91,12 +105,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DTO\ArticuloDto.cs" />
+    <Compile Include="VerArticulo.cs" />
+    <Compile Include="VerArticulo.Designer.cs" />
+    <EmbeddedResource Include="CrearArticulo.resx" />
+    <EmbeddedResource Include="CrearCategoria.resx" />
     <EmbeddedResource Include="CrearMarca.resx">
       <DependentUpon>CrearMarca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarCategoria.resx" />
     <EmbeddedResource Include="EditarMarca.resx">
       <DependentUpon>EditarMarca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarCategoria.resx" />
     <EmbeddedResource Include="EliminarMarca.resx">
       <DependentUpon>EliminarMarca.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +132,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VerArticulo.resx" />
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

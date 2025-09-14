@@ -7,32 +7,30 @@ namespace UI
 {
     public partial class EliminarMarca : Form
     {
-        private readonly Marca marcaAEliminar;
+        private readonly Marca MarcaAEliminar;
 
         public EliminarMarca(Marca marca)
         {
             InitializeComponent();
-            marcaAEliminar = marca;
-            this.Load += new System.EventHandler(this.EliminarMarca_Load);
+            MarcaAEliminar = marca;
+            Load += EliminarMarca_Load;
         }
 
         private void EliminarMarca_Load(object sender, EventArgs e)
         {
-            if (marcaAEliminar != null)
+            if (MarcaAEliminar != null)
             {
-                txtbDescripcionEliminarMarca.Text = marcaAEliminar.Descripcion;
+                txtbDescripcionEliminarMarca.Text = MarcaAEliminar.Descripcion;
                 txtbDescripcionEliminarMarca.ReadOnly = true;
             }
-
-
         }
 
-        private void button1_Click(object sender, EventArgs e) // Botón Eliminar
+        private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 MarcaNegocio negocio = new MarcaNegocio();
-                negocio.eliminar(marcaAEliminar.Id);
+                negocio.Eliminar(MarcaAEliminar.Id);
                 DialogResult = DialogResult.OK;
                 Close();
                 MessageBox.Show("¡Eliminado exitosamente!");
@@ -41,17 +39,12 @@ namespace UI
             {
                 MessageBox.Show("Ocurrió un error al eliminar la marca: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 DialogResult = DialogResult.Abort;
-
-
-
                 Close();
-
             }
         }
 
-        private void button2_Click(object sender, EventArgs e) // Botón Cancelar
+        private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.Cancel;
             Close();
         }
     }

@@ -83,34 +83,49 @@ namespace Negocio
             return lista;
         }
 
-        public void agregar(Marca marca)
+        public void Agregar(Marca marca)
         {
-            using (SqlConnection conexion = BaseDeDatos.ObtenerConexion())
+            SqlConnection conexion = BaseDeDatos.ObtenerConexion();
+            try
             {
                 SqlCommand comando = new SqlCommand("INSERT INTO MARCAS (Descripcion) VALUES (@Descripcion)", conexion);
                 comando.Parameters.AddWithValue("@Descripcion", marca.Descripcion);
                 comando.ExecuteNonQuery();
             }
+            finally
+            {
+                conexion?.Close();
+            }
         }
 
-        public void modificar(Marca marca)
+        public void Modificar(Marca marca)
         {
-            using (SqlConnection conexion = BaseDeDatos.ObtenerConexion())
+            SqlConnection conexion = BaseDeDatos.ObtenerConexion();
+            try
             {
                 SqlCommand comando = new SqlCommand("UPDATE MARCAS SET Descripcion = @Descripcion WHERE Id = @Id", conexion);
                 comando.Parameters.AddWithValue("@Descripcion", marca.Descripcion);
                 comando.Parameters.AddWithValue("@Id", marca.Id);
                 comando.ExecuteNonQuery();
             }
+            finally
+            {
+                conexion?.Close();
+            }
         }
 
-        public void eliminar(int id)
+        public void Eliminar(int id)
         {
-            using (SqlConnection conexion = BaseDeDatos.ObtenerConexion())
+            SqlConnection conexion = BaseDeDatos.ObtenerConexion();
+            try
             {
                 SqlCommand comando = new SqlCommand("DELETE FROM MARCAS WHERE Id = @Id", conexion);
                 comando.Parameters.AddWithValue("@Id", id);
                 comando.ExecuteNonQuery();
+            }
+            finally
+            {
+                conexion?.Close();
             }
         }
     }

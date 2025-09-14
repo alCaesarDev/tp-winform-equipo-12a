@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using Negocio;
@@ -31,18 +26,11 @@ namespace UI
                 cboCategoria.DataSource = categoriaNegocio.Listar();
                 cboCategoria.ValueMember = "Id";
                 cboCategoria.DisplayMember = "Descripcion";
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCancelarArticulo_Click(object sender, EventArgs e)
@@ -69,26 +57,54 @@ namespace UI
 
                 if (!decimal.TryParse(txtCrearPrecioArticulo.Text, out decimal precio))
                 {
-                    MessageBox.Show("Por favor ,ingrese un numerovalido en el campo precio");
+                    MessageBox.Show("Por favor ,ingrese un numero valido en el campo precio");
                     return;
                 }
 
                 nuevo.Precio = precio;
                 nuevo.Marca = (Marca)cboMarca.SelectedItem;
                 nuevo.Categoria = (Categoria)cboCategoria.SelectedItem;
-                negocio.agregar(nuevo);
+
+                if (listImagenes.Items.Count == 0)
+                {
+                    MessageBox.Show("Debe seleccionar al menos una imagen");
+                    return;
+                }
+
+                List<Imagen> listadoImagenes = new List<Imagen>();
+                foreach (string item in listImagenes.Items)
+                {
+                    Imagen imagen = new Imagen();
+                    imagen.ImagenUrl = item;
+                    listadoImagenes.Add(imagen);
+                }
+
+                nuevo.Imagenes = listadoImagenes;
+
+                negocio.Agregar(nuevo);
                 MessageBox.Show("Articulo agregado Exitosamente");
                 Close();
             }
 
-
-            
-            
             catch (Exception ex)
             {
-               
-                MessageBox.Show("Ocurrio un error al cargar los datos"+ ex.Message);
+                MessageBox.Show("Ocurrio un error al cargar los datos" + ex.Message);
+            }
+        }
 
+        private void btnSeleccionarImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Archivos de imagen|*.jpg;*.png";
+            dialog.Title = "Seleccione una o más imágenes";
+            dialog.Multiselect = true;
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                listImagenes.Items.Clear();
+                foreach (string file in dialog.FileNames)
+                {
+                    listImagenes.Items.Add(file);
+                }
             }
         }
     }

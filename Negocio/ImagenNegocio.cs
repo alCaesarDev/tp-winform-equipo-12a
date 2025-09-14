@@ -43,13 +43,36 @@ namespace Negocio
             }
             finally
             {
-                if (conexion != null)
-                {
-                    conexion.Close();
-                }
+                conexion?.Close();
             }
 
             return lista;
+        }
+
+        public void Agregar(Imagen nuevo)
+        {
+            SqlConnection conexion = null;
+            try
+            {
+                conexion = BaseDeDatos.ObtenerConexion();
+                string consulta = @"
+                INSERT INTO IMAGENES (IdArticulo, ImagenUrl) 
+                VALUES (@IdArticulo, @ImagenUrl);
+                ";
+
+                SqlCommand comando = new SqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@IdArticulo", nuevo.IdArticulo);
+                comando.Parameters.AddWithValue("@ImagenUrl", nuevo.ImagenUrl);
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al agregar la imagen", ex);
+            }
+            finally
+            {
+                conexion?.Close();
+            }
         }
     }
 }

@@ -45,7 +45,7 @@ namespace UI
                     return;
                 }
 
-                negocio.modificar(marca);
+                negocio.Modificar(marca);
 
                 MessageBox.Show("¡Editado exitosamente!");
 
