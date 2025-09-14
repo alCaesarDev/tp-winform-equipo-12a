@@ -101,12 +101,52 @@ namespace UI
 
         protected override void ClickBotonEditar(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca va el modal de edicion del articulo {RegistroSeleccionado.Id}.");
+            if (RegistroSeleccionado != null)
+            {
+                try
+                {
+                    int idSeleccionado = RegistroSeleccionado.Id;
+                    ArticuloNegocio negocio = new ArticuloNegocio();
+                    Articulo articuloCompleto = negocio.buscarPorId(idSeleccionado);
+                    if (articuloCompleto != null)
+                    {
+                        EditarArticulo formularioEdicion = new EditarArticulo(articuloCompleto);
+                        formularioEdicion.ShowDialog();
+                        CargarRegistros(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo encontrar el articulo en la base de datos");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrio un error al buscar el articulo para editar: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un articulo para editar");
+            }
         }
 
         protected override void ClickBotonEliminar(object sender, EventArgs e)
         {
-            MessageBox.Show($"Aca va un modal de confirmacion de eliminacion del articulo {RegistroSeleccionado.Id}.");
+            if(RegistroSeleccionado != null)
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                Articulo articuloAEliminar = negocio.buscarPorId(RegistroSeleccionado.Id);
+                EliminarArticulo ventanaArticulo = new EliminarArticulo(articuloAEliminar);
+                DialogResult resultado = ventanaArticulo.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    CargarRegistros(sender, e);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un articulo para eliminar");
+            }
         }
 
         protected override void ClickBotonCrear(object sender, EventArgs e)

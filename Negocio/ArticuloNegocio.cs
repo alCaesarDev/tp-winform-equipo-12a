@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
 using Dominio;
 using Infraestructura;
 using Negocio.DTO;
@@ -250,6 +251,42 @@ namespace Negocio
             finally
             {
                 conexion?.Close();
+            }
+        }
+        
+        public void modificar(Articulo articulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update Articulos set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio where Id = @id");
+                datos.setearParametro("@codigo", articulo.Codigo);
+                datos.setearParametro("@nombre", articulo.Nombre);
+                datos.setearParametro("@descripcion", articulo.Descripcion);
+                datos.setearParametro("@idMarca", articulo.Marca.Id);
+                datos.setearParametro("@idCategoria", articulo.Categoria.Id);
+                datos.setearParametro("@precio", articulo.Precio);
+                datos.setearParametro("@id", articulo.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void eliminar(int id)
+        {
+            using (SqlConnection conexion = BaseDeDatos.ObtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("DELETE FROM ARTICULOS WHERE Id = @Id", conexion);
+                comando.Parameters.AddWithValue("@Id", id);
+                comando.ExecuteNonQuery();
             }
         }
     }

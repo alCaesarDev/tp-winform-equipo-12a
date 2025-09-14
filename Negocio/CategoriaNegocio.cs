@@ -47,6 +47,71 @@ namespace Negocio
             }
 
             return lista;
+
+
+
+
+
+
+        }
+
+        public void agregar(Categoria categoria)
+        {
+
+
+            using (SqlConnection conexion = BaseDeDatos.ObtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand("INSERT INTO Categorias (Descripcion) VALUES (@Descripcion)", conexion);
+                comando.Parameters.AddWithValue("@Descripcion", categoria.Descripcion);
+                comando.ExecuteNonQuery();
+            }
+        }
+
+
+
+
+        public void Modificar(Categoria categoria)
+        {
+
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update CATEGORIAS set Descripcion = @Descripcion WHERE Id = @Id");
+
+                datos.setearParametro("@Descripcion", categoria.Descripcion);
+                datos.setearParametro("@Id", categoria.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void Eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("DELETE FROM CATEGORIAS WHERE Id = @Id");
+                datos.setearParametro("@Id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
 
         public void agregar(Categoria categoria)
