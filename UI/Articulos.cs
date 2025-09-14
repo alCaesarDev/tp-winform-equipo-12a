@@ -107,7 +107,7 @@ namespace UI
                 {
                     int idSeleccionado = RegistroSeleccionado.Id;
                     ArticuloNegocio negocio = new ArticuloNegocio();
-                    Articulo articuloCompleto = negocio.buscarPorId(idSeleccionado);
+                    Articulo articuloCompleto = negocio.BuscarPorId(idSeleccionado);
                     if (articuloCompleto != null)
                     {
                         EditarArticulo formularioEdicion = new EditarArticulo(articuloCompleto);
@@ -135,7 +135,7 @@ namespace UI
             if(RegistroSeleccionado != null)
             {
                 ArticuloNegocio negocio = new ArticuloNegocio();
-                Articulo articuloAEliminar = negocio.buscarPorId(RegistroSeleccionado.Id);
+                Articulo articuloAEliminar = negocio.BuscarPorId(RegistroSeleccionado.Id);
                 EliminarArticulo ventanaArticulo = new EliminarArticulo(articuloAEliminar);
                 DialogResult resultado = ventanaArticulo.ShowDialog();
                 if (resultado == DialogResult.OK)

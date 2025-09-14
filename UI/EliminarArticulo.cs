@@ -48,7 +48,7 @@ namespace UI
             try
             {
                 ArticuloNegocio negocio = new ArticuloNegocio();
-                negocio.eliminar(articuloAEliminar.Id);
+                negocio.Eliminar(articuloAEliminar.Id);
                 DialogResult = DialogResult.OK;
                 Close();
                 MessageBox.Show("¡Eliminado exitosamnte!");

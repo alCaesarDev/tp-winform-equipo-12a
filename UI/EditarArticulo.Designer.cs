@@ -79,6 +79,7 @@
             this.btnCancelarArticuloEditado.TabIndex = 28;
             this.btnCancelarArticuloEditado.Text = "Cancelar";
             this.btnCancelarArticuloEditado.UseVisualStyleBackColor = true;
+            this.btnCancelarArticuloEditado.Click += new System.EventHandler(this.btnCancelarArticuloEditado_Click);
             // 
             // btnGuardarArticuloEditado
             // 

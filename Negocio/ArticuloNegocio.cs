@@ -254,7 +254,7 @@ namespace Negocio
             }
         }
         
-        public void modificar(Articulo articulo)
+        public void Modificar(Articulo articulo)
         {
             AccesoDatos datos = new AccesoDatos();
             try
@@ -280,7 +280,7 @@ namespace Negocio
             }
         }
 
-        public void eliminar(int id)
+        public void Eliminar(int id)
         {
             using (SqlConnection conexion = BaseDeDatos.ObtenerConexion())
             {

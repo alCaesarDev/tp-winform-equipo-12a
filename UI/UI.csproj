@@ -71,6 +71,8 @@
     </Compile>
     <Compile Include="DTO\CategoriaDto.cs" />
     <Compile Include="DTO\MarcaDto.cs" />
+    <Compile Include="EditarArticulo.cs" />
+    <Compile Include="EditarArticulo.Designer.cs" />
     <Compile Include="EditarCategoria.cs" />
     <Compile Include="EditarCategoria.Designer.cs" />
     <Compile Include="EditarMarca.cs">
@@ -79,6 +81,8 @@
     <Compile Include="EditarMarca.Designer.cs">
       <DependentUpon>EditarMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarArticulo.cs" />
+    <Compile Include="EliminarArticulo.Designer.cs" />
     <Compile Include="EliminarCategoria.cs" />
     <Compile Include="EliminarCategoria.Designer.cs" />
     <Compile Include="EliminarMarca.cs">
@@ -112,10 +116,12 @@
     <EmbeddedResource Include="CrearMarca.resx">
       <DependentUpon>CrearMarca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarArticulo.resx" />
     <EmbeddedResource Include="EditarCategoria.resx" />
     <EmbeddedResource Include="EditarMarca.resx">
       <DependentUpon>EditarMarca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarArticulo.resx" />
     <EmbeddedResource Include="EliminarCategoria.resx" />
     <EmbeddedResource Include="EliminarMarca.resx">
       <DependentUpon>EliminarMarca.cs</DependentUpon>

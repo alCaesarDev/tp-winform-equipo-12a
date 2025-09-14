@@ -51,6 +51,11 @@ namespace UI
             }
         }
 
+        private void btnCancelarArticuloEditado_Click(object sender, EventArgs e)
+        {
+            Close();   
+        }
+        
         private void btnGuardarArticuloEditado_Click(object sender, EventArgs e)
         {
            ArticuloNegocio negocio = new ArticuloNegocio();
@@ -67,6 +72,12 @@ namespace UI
                     MessageBox.Show("Ingrese un numero valido en campo precio");
                     return;
                 }
+                
+                if(cboMarcaEditarArticulo.SelectedItem == null)
+                {
+                    MessageBox.Show("La marca es requerida");
+                    return;
+                }
 
                 articulo.Codigo = txtEditarCodigoArticulo.Text;
                 articulo.Nombre = txtEditarNombreArticulo.Text;
@@ -75,10 +86,9 @@ namespace UI
                 articulo.Marca = (Marca)cboMarcaEditarArticulo.SelectedItem;
                 articulo.Categoria = (Categoria)cboEditarArticuloCategoria.SelectedItem;
                 
-                negocio.modificar(articulo);
+                negocio.Modificar(articulo);
                 MessageBox.Show("Modificado exitosamente");
                 Close();
-
             }
 
             catch(Exception ex)

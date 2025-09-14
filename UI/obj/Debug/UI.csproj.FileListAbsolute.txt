@@ -64,3 +64,5 @@ C:\Users\agust\RiderProjects\WinFormApp\UI\obj\Debug\UI.EliminarCategoria.resour
 C:\Users\agust\RiderProjects\WinFormApp\UI\obj\Debug\UI.EliminarMarca.resources
 C:\Users\agust\RiderProjects\WinFormApp\UI\obj\Debug\UI.Principal.resources
 C:\Users\agust\RiderProjects\WinFormApp\UI\obj\Debug\UI.VerArticulo.resources
+C:\Users\agust\RiderProjects\WinFormApp\UI\obj\Debug\UI.EditarArticulo.resources
+C:\Users\agust\RiderProjects\WinFormApp\UI\obj\Debug\UI.EliminarArticulo.resources
