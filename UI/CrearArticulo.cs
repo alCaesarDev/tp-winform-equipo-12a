@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -60,6 +60,12 @@ namespace UI
                     string.IsNullOrWhiteSpace(txtCrearNombreArticulo.Text))
                 {
                     MessageBox.Show("Los campos codigo y nombre son obligatorios");
+                    return;
+                }
+
+                if (cboMarca.SelectedItem == null || cboCategoria.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor, seleccione una marca y una categoria.");
                     return;
                 }
 
