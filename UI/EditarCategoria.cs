@@ -36,7 +36,7 @@ namespace UI
             {
                 if (string.IsNullOrWhiteSpace(txtModificarDescripcion.Text))
                 {
-                    MessageBox.Show("La descripcion no puede estar vacia");
+                    MessageBox.Show("La descripción no puede estar vacía");
                     return;
                 }
 

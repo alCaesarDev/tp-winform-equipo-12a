@@ -196,7 +196,7 @@
             this.MaximumSize = new System.Drawing.Size(359, 371);
             this.MinimumSize = new System.Drawing.Size(359, 371);
             this.Name = "EditarArticulo";
-            this.Text = "Editar Articulo";
+            this.Text = "Editar Artículo";
             this.Load += new System.EventHandler(this.EditarArticulo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

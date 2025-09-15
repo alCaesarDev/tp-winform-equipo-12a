@@ -80,7 +80,7 @@
             this.lblTituloModifica.Name = "lblTituloModifica";
             this.lblTituloModifica.Size = new System.Drawing.Size(165, 20);
             this.lblTituloModifica.TabIndex = 4;
-            this.lblTituloModifica.Text = "Editar La Categoria";
+            this.lblTituloModifica.Text = "Editar la Categoría";
             // 
             // EditarCategoria
             // 

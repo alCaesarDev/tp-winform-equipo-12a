@@ -75,7 +75,7 @@
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(55, 13);
             this.lblCategoria.TabIndex = 4;
-            this.lblCategoria.Text = "Categoria:";
+            this.lblCategoria.Text = "Categoría:";
             // 
             // lblPrecio
             // 
@@ -190,3 +190,4 @@
         private System.Windows.Forms.FlowLayoutPanel panelImagenes;
     }
 }
+

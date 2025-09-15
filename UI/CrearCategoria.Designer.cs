@@ -101,7 +101,7 @@
             this.MinimumSize = new System.Drawing.Size(330, 330);
             this.Name = "CrearCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CrearCategoria";
+            this.Text = "Crear Categoría";
             this.ResumeLayout(false);
             this.PerformLayout();
 

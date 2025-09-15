@@ -51,11 +51,11 @@ namespace UI
                 negocio.Eliminar(articuloAEliminar.Id);
                 DialogResult = DialogResult.OK;
                 Close();
-                MessageBox.Show("¡Eliminado exitosamnte!");
+                MessageBox.Show("¡Eliminado exitosamente!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un error al eliminar el articulo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrio un error al eliminar el artículo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 DialogResult = DialogResult.Abort;
                 Close();
             }

@@ -35,13 +35,13 @@ namespace UI
             {
                 CategoriaNegocio negocio = new CategoriaNegocio();
                 negocio.Eliminar(categoriaEliminar.Id);
-                MessageBox.Show("Categoria eliminada exitosamente");
+                MessageBox.Show("Categoría eliminada exitosamente");
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al eliminar la categoria: " + ex.Message);
+                MessageBox.Show("Error al eliminar la categoría: " + ex.Message);
                 this.DialogResult = DialogResult.Cancel;
                 this.Close();
 

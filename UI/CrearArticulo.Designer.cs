@@ -173,7 +173,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 20);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Crea un Articulo";
+            this.label1.Text = "Crea un Artículo";
             // 
             // cboMarca
             // 
@@ -243,3 +243,4 @@
         private System.Windows.Forms.ComboBox cboCategoria;
     }
 }
+

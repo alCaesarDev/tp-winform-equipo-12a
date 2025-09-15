@@ -29,7 +29,7 @@ namespace UI
 
         protected override string ObtenerTitulo()
         {
-            return "Categorias";
+            return "Categorías";
         }
 
         protected override void ClickBotonVer(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace UI
             }
             else
             {
-                MessageBox.Show("Por favor , seleccione una categoria para eliminar");
+                MessageBox.Show("Por favor , seleccione una categoría para eliminar");
             }
         }
 

@@ -46,7 +46,7 @@ namespace UI
 
         protected override string ObtenerTitulo()
         {
-            return "Articulos";
+            return "Artículos";
         }
 
         protected override bool MostrarBotonVer() => true;
@@ -71,17 +71,17 @@ namespace UI
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo encontrar el articulo en la base de datos");
+                        MessageBox.Show("No se pudo encontrar el artículo en la base de datos");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ocurrio un error al buscar el detalle del articulo: " + ex.Message);
+                    MessageBox.Show("Ocurrio un error al buscar el detalle del artículo: " + ex.Message);
                 }
             }
             else
             {
-                MessageBox.Show("Por favor,seleccione un articulo para ver su detalle");
+                MessageBox.Show("Por favor,seleccione un artículo para ver su detalle");
             }
         }
 
@@ -116,17 +116,17 @@ namespace UI
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo encontrar el articulo en la base de datos");
+                        MessageBox.Show("No se pudo encontrar el artículo en la base de datos");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ocurrio un error al buscar el articulo para editar: " + ex.Message);
+                    MessageBox.Show("Ocurrio un error al buscar el artículo para editar: " + ex.Message);
                 }
             }
             else
             {
-                MessageBox.Show("Por favor, seleccione un articulo para editar");
+                MessageBox.Show("Por favor, seleccione un artículo para editar");
             }
         }
 
@@ -145,7 +145,7 @@ namespace UI
             }
             else
             {
-                MessageBox.Show("Seleccione un articulo para eliminar");
+                MessageBox.Show("Seleccione un artículo para eliminar");
             }
         }
 

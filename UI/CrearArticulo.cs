@@ -22,10 +22,10 @@ namespace UI
             {
                 cboMarca.DataSource = marcaNegocio.Listar();
                 cboMarca.ValueMember = "Id";
-                cboMarca.DisplayMember = "Descripcion";
+                cboMarca.DisplayMember = "Descripción";
                 cboCategoria.DataSource = categoriaNegocio.Listar();
                 cboCategoria.ValueMember = "Id";
-                cboCategoria.DisplayMember = "Descripcion";
+                cboCategoria.DisplayMember = "Descripción";
             }
             catch (Exception ex)
             {
@@ -47,13 +47,13 @@ namespace UI
                 if (string.IsNullOrWhiteSpace(txtCrearCodigoArticulo.Text) ||
                     string.IsNullOrWhiteSpace(txtCrearNombreArticulo.Text))
                 {
-                    MessageBox.Show("Los campos codigo y nombre son obligatorios");
+                    MessageBox.Show("Los campos código y nombre son obligatorios");
                     return;
                 }
 
                 if (cboMarca.SelectedItem == null || cboCategoria.SelectedItem == null)
                 {
-                    MessageBox.Show("Por favor, seleccione una marca y una categoria.");
+                    MessageBox.Show("Por favor, seleccione una marca y una categoría.");
                     return;
                 }
 
@@ -63,7 +63,7 @@ namespace UI
 
                 if (!decimal.TryParse(txtCrearPrecioArticulo.Text, out decimal precio))
                 {
-                    MessageBox.Show("Por favor ,ingrese un numero valido en el campo precio");
+                    MessageBox.Show("Por favor ,ingrese un número válido en el campo precio");
                     return;
                 }
 
@@ -88,7 +88,7 @@ namespace UI
                 nuevo.Imagenes = listadoImagenes;
 
                 negocio.Agregar(nuevo);
-                MessageBox.Show("Articulo agregado Exitosamente");
+                MessageBox.Show("Artículo agregado exitosamente");
                 Close();
             }
 

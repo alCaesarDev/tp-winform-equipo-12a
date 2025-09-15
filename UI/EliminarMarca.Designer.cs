@@ -94,7 +94,7 @@
             this.MaximumSize = new System.Drawing.Size(291, 252);
             this.MinimumSize = new System.Drawing.Size(291, 252);
             this.Name = "EliminarMarca";
-            this.Text = "EliminarMarca";
+            this.Text = "Eliminar Marca";
             this.ResumeLayout(false);
             this.PerformLayout();
 

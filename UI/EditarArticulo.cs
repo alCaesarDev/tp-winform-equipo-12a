@@ -19,7 +19,7 @@ namespace UI
         {
             InitializeComponent();
             this.articulo = articulo;
-            Text = "Editar Articulo";
+            Text = "Editar Artículo";
         }
 
         private void EditarArticulo_Load(object sender, EventArgs e)
@@ -30,10 +30,10 @@ namespace UI
             {
                 cboEditarArticuloCategoria.DataSource = categoriaNegocio.Listar();
                 cboEditarArticuloCategoria.ValueMember = "Id";
-                cboEditarArticuloCategoria.DisplayMember = "Descripcion";
+                cboEditarArticuloCategoria.DisplayMember = "Descripción";
                 cboMarcaEditarArticulo.DataSource = marcaNegocio.Listar();
                 cboMarcaEditarArticulo.ValueMember = "Id";
-                cboMarcaEditarArticulo.DisplayMember = "Descripcion";
+                cboMarcaEditarArticulo.DisplayMember = "Descripción";
 
                 if (articulo != null)
                 {
@@ -63,13 +63,13 @@ namespace UI
             {
                 if(string.IsNullOrWhiteSpace(txtEditarCodigoArticulo.Text) || string.IsNullOrEmpty(txtEditarNombreArticulo.Text))
                 {
-                    MessageBox.Show("Los campos codigo y nombre son obligatorios");
+                    MessageBox.Show("Los campos código y nombre son obligatorios");
                     return;
                 }
 
                 if(!decimal.TryParse(txtEditarPrecioArticulo.Text, out decimal precio))
                 {
-                    MessageBox.Show("Ingrese un numero valido en campo precio");
+                    MessageBox.Show("Ingrese un número valido en campo precio");
                     return;
                 }
                 

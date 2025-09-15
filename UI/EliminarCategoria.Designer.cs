@@ -61,7 +61,7 @@
             this.lblEliminarTitulo.Name = "lblEliminarTitulo";
             this.lblEliminarTitulo.Size = new System.Drawing.Size(166, 20);
             this.lblEliminarTitulo.TabIndex = 2;
-            this.lblEliminarTitulo.Text = "Eliminar Categoria?";
+            this.lblEliminarTitulo.Text = "¿Eliminar Categoría?";
             // 
             // EliminarCategoria
             // 

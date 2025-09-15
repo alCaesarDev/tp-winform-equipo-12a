@@ -135,7 +135,7 @@
             this.lblEliminarCategoriaArticulo.Name = "lblEliminarCategoriaArticulo";
             this.lblEliminarCategoriaArticulo.Size = new System.Drawing.Size(55, 13);
             this.lblEliminarCategoriaArticulo.TabIndex = 36;
-            this.lblEliminarCategoriaArticulo.Text = "Categoria:";
+            this.lblEliminarCategoriaArticulo.Text = "Categoría:";
             // 
             // lblEliminarArticuloMarca
             // 
